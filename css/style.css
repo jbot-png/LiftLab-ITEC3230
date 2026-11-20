@@ -1,0 +1,887 @@
+/* Main colours for the whole app */
+
+:root {
+
+    --green: #08752a;
+
+    --dark-green: #05551d;
+
+    --light-green: #e9f8e9;
+
+    --white: #ffffff;
+
+    --background: #e9eeea;
+
+    --text: #202820;
+
+    --gray: #666666;
+
+    --border: #d8ded8;
+
+}
+
+
+
+/* Basic styling for every page */
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    min-height: 100dvh;
+
+    font-family: Arial, sans-serif;
+
+    background-color: var(--background);
+
+    color: var(--text);
+
+
+
+    /* Keeps the mobile layout centered on desktop */
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 16px;
+
+}
+
+
+
+/* Main container for our website */
+
+.app-shell {
+
+    width: 100%;
+
+    max-width: 390px;
+
+    height: min(844px, calc(100dvh - 32px));
+
+    background-color: var(--white);
+
+    border-radius: 22px;
+
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.12);
+
+    overflow: hidden;
+
+
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+
+/* Header used across the app */
+
+.app-header {
+
+    background-color: var(--light-green);
+
+    min-height: 68px;
+
+    padding: 14px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+
+/* Lift Lab logo and name */
+
+.brand {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--dark-green);
+
+    font-size: 26px;
+
+    font-weight: bold;
+
+}
+
+
+
+.brand-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    color: var(--green);
+
+}
+
+
+
+/* Back arrow for other pages */
+
+.back-link {
+
+    position: absolute;
+
+    left: 16px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--dark-green);
+
+    text-decoration: none;
+
+    font-size: 26px;
+
+    padding: 6px;
+
+}
+
+
+
+/* Main content area */
+
+.app-main {
+
+    flex: 1;
+
+    min-height: 0;
+
+    padding: 22px 18px;
+
+    overflow-y: auto;
+
+}
+
+
+
+/* Welcome Back heading */
+
+.page-title {
+
+    margin: 0 0 22px;
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+    letter-spacing: -0.5px;
+
+}
+
+
+
+/* Main homepage menu */
+
+.home-actions {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 11px;
+
+}
+
+
+
+/* Each clickable menu option */
+
+.action-row {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    min-height: 65px;
+
+    padding: 13px 15px;
+
+
+
+    background-color: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: 11px;
+
+
+
+    text-decoration: none;
+
+    color: var(--text);
+
+    transition: background-color 0.2s;
+
+}
+
+
+
+/* Gives feedback when the user hovers */
+
+.action-row:hover {
+
+    background-color: var(--light-green);
+
+    border-color: var(--green);
+
+}
+
+
+
+/* Icons beside menu labels */
+
+.action-icon {
+
+    width: 30px;
+
+    min-width: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--green);
+
+}
+
+
+
+/* Text and description inside each row */
+
+.action-copy {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    flex: 1;
+
+}
+
+
+
+.action-copy strong {
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+}
+
+
+
+.action-copy small {
+
+    font-size: 12px;
+
+    color: var(--gray);
+
+}
+
+
+
+/* Arrow on the right side */
+
+.chevron {
+
+    display: flex;
+
+    color: var(--green);
+
+    align-items: center;
+
+}
+
+
+
+/* Daily Check-In is highlighted green */
+
+.action-row--featured {
+
+    background-color: var(--green);
+
+    border-color: var(--green);
+
+    color: var(--white);
+
+}
+
+
+
+.action-row--featured .action-icon,
+
+.action-row--featured .chevron {
+
+    color: var(--white);
+
+}
+
+
+
+.action-row--featured:hover {
+
+    background-color: var(--dark-green);
+
+    border-color: var(--dark-green);
+
+}
+
+
+
+/* Shared green buttons for all group pages */
+
+.primary-btn {
+
+    width: 100%;
+
+    display: block;
+
+    padding: 15px;
+
+    background-color: var(--green);
+
+    color: var(--white);
+
+    border: none;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+
+.primary-btn:hover {
+
+    background-color: var(--dark-green);
+
+}
+
+
+
+/* Outlined buttons for secondary actions */
+
+.secondary-btn {
+
+    width: 100%;
+
+    display: block;
+
+    padding: 14px;
+
+    background-color: var(--white);
+
+    color: var(--green);
+
+    border: 1px solid var(--green);
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+
+/* Bottom navigation used on every page */
+
+.bottom-nav {
+
+    display: flex;
+
+    justify-content: space-around;
+
+    background-color: var(--white);
+
+    border-top: 1px solid var(--border);
+
+    padding: 9px 5px;
+
+    padding-bottom: max(9px, env(safe-area-inset-bottom));
+
+    flex-shrink: 0;
+
+}
+
+
+
+.nav-link {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 5px;
+
+
+
+    padding: 6px 2px;
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    border-radius: 8px;
+
+}
+
+
+
+/* Highlights the current page */
+
+.nav-link.active {
+
+    color: var(--green);
+
+    font-weight: bold;
+
+}
+
+
+
+.nav-link:hover {
+
+    color: var(--green);
+
+    background-color: var(--light-green);
+
+}
+
+
+
+/* Sets a consistent size for our icons */
+
+[data-icon] svg {
+
+    width: 24px;
+
+    height: 24px;
+
+    display: block;
+
+}
+
+
+
+/* Makes keyboard selection visible */
+
+a:focus-visible,
+
+button:focus-visible,
+
+input:focus-visible {
+
+    outline: 3px solid var(--green);
+
+    outline-offset: 3px;
+
+}
+
+
+
+/* Mobile screens use their full available width */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 0;
+
+        display: block;
+
+        background-color: var(--white);
+
+    }
+
+
+
+    .app-shell {
+
+        max-width: 100%;
+
+        height: 100vh;
+
+        height: 100dvh;
+
+        border-radius: 0;
+
+        box-shadow: none;
+
+    }
+
+
+
+    .app-main {
+
+        padding: 20px 16px;
+
+    }
+
+}
+
+
+
+/* Small phone adjustments */
+
+@media (max-width: 360px) {
+
+    .page-title {
+
+        font-size: 24px;
+
+    }
+
+
+
+    .action-row {
+
+        min-height: 58px;
+
+        padding: 11px 12px;
+
+    }
+
+
+
+    .action-copy strong {
+
+        font-size: 14px;
+
+    }
+
+}
+
+
+
+
+
+
+
+/* Daily Check-In page */
+
+
+
+/* Heading and description */
+
+.checkin-title {
+
+    font-size: 25px;
+
+    margin: 0 0 10px;
+
+    letter-spacing: -0.5px;
+
+}
+
+
+
+.checkin-description {
+
+    font-size: 14px;
+
+    color: var(--gray);
+
+    line-height: 1.5;
+
+    margin: 0 0 24px;
+
+}
+
+
+
+/* Removes the default fieldset border */
+
+.energy-options {
+
+    border: none;
+
+    padding: 0;
+
+    margin: 0 0 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+
+/* Each selectable energy level */
+
+.energy-option {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    min-height: 74px;
+
+    padding: 13px 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 11px;
+
+    background-color: var(--white);
+
+    cursor: pointer;
+
+    transition: background-color 0.2s, border-color 0.2s;
+
+}
+
+
+
+/* Gives feedback when hovering over an option */
+
+.energy-option:hover {
+
+    border-color: var(--green);
+
+    background-color: #f6fbf6;
+
+}
+
+
+
+/* Highlights the selected option */
+
+.energy-option:has(input:checked) {
+
+    background-color: var(--light-green);
+
+    border: 2px solid var(--green);
+
+}
+
+
+
+/* Makes the selected option visible with a keyboard */
+
+.energy-option:has(input:focus-visible) {
+
+    outline: 3px solid var(--green);
+
+    outline-offset: 3px;
+
+}
+
+
+
+/* Faces beside each energy option */
+
+.energy-face {
+
+    font-size: 29px;
+
+    width: 36px;
+
+    text-align: center;
+
+    flex-shrink: 0;
+
+}
+
+
+
+/* Energy level name and description */
+
+.energy-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    flex: 1;
+
+}
+
+
+
+.energy-text strong {
+
+    font-size: 17px;
+
+}
+
+
+
+.energy-text small {
+
+    font-size: 12px;
+
+    color: var(--gray);
+
+}
+
+
+
+/* Radio buttons on the right side */
+
+.energy-option input[type="radio"] {
+
+    width: 19px;
+
+    height: 19px;
+
+    margin: 0;
+
+    accent-color: var(--green);
+
+    cursor: pointer;
+
+}
+
+
+
+/* Message if the user hasn't selected an option */
+
+.form-error {
+
+    color: #b42318;
+
+    font-size: 13px;
+
+    margin: 0 0 14px;
+
+}
+
+
+
+/* Keep hidden messages hidden */
+
+.form-error[hidden] {
+
+    display: none;
+
+}
+
+
+
+/* Hides extra text visually but keeps it for screen readers */
+
+.sr-only {
+
+    position: absolute;
+
+    width: 1px;
+
+    height: 1px;
+
+    padding: 0;
+
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+
+    white-space: nowrap;
+
+    border: 0;
+
+}
+
+
+
+/* Smaller spacing for short phone screens */
+
+@media (max-height: 700px) {
+
+    .checkin-description {
+
+        margin-bottom: 16px;
+
+    }
+
+
+
+    .energy-options {
+
+        gap: 9px;
+
+    }
+
+
+
+    .energy-option {
+
+        min-height: 62px;
+
+        padding: 10px 12px;
+
+    }
+
+}
