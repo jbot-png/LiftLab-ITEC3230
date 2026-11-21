@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Lift Lab</title>
+
+  <!-- Same CSS and JS files used across the app -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/shared.js" defer></script>
+</head>
+
+<body>
+  <div class="app-shell">
+
+    <!-- Same header style will be used on every page -->
+    <header class="app-header">
+      <div class="brand">
+        <span class="brand-icon" data-icon="dumbbell" aria-hidden="true"></span>
+        <span>Lift Lab</span>
+      </div>
+    </header>
+
+    <main class="app-main home-main">
+
+      <h1 class="page-title">Welcome Back!</h1>
+
+      <!-- Main menu follows the order from our prototype -->
+      <div class="home-actions">
+
+        <a class="action-row" href="checkin.html">
+          <span class="action-icon" data-icon="calendar-check" aria-hidden="true"></span>
+          <span class="action-copy">
+            <strong>Today's Workout</strong>
+            <small>Upper Body - 45 min</small>
+          </span>
+          <span class="chevron" data-icon="chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <a class="action-row action-row--featured" href="checkin.html">
+          <span class="action-icon" data-icon="heart-pulse" aria-hidden="true"></span>
+          <span class="action-copy">
+            <strong>Daily Check-In</strong>
+          </span>
+          <span class="chevron" data-icon="chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <a class="action-row" href="preferences.html">
+          <span class="action-icon" data-icon="layers" aria-hidden="true"></span>
+          <span class="action-copy">
+            <strong>My Workouts</strong>
+          </span>
+          <span class="chevron" data-icon="chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <a class="action-row" href="progress.html">
+          <span class="action-icon" data-icon="chart" aria-hidden="true"></span>
+          <span class="action-copy">
+            <strong>Progress Tracker</strong>
+          </span>
+          <span class="chevron" data-icon="chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <a class="action-row" href="schedule.html">
+          <span class="action-icon" data-icon="calendar" aria-hidden="true"></span>
+          <span class="action-copy">
+            <strong>Workout Schedule</strong>
+          </span>
+          <span class="chevron" data-icon="chevron-right" aria-hidden="true"></span>
+        </a>
+
+      </div>
+    </main>
+
+    <!-- Keep these four tabs on all the group's pages -->
+    <nav class="bottom-nav" aria-label="Main navigation">
+
+      <a class="nav-link active" href="index.html" aria-current="page">
+        <span data-icon="home" aria-hidden="true"></span>
+        <span>Home</span>
+      </a>
+
+      <a class="nav-link" href="preferences.html">
+        <span data-icon="dumbbell" aria-hidden="true"></span>
+        <span>Workouts</span>
+      </a>
+
+      <a class="nav-link" href="progress.html">
+        <span data-icon="chart" aria-hidden="true"></span>
+        <span>Progress</span>
+      </a>
+
+      <a class="nav-link" href="profile.html">
+        <span data-icon="user" aria-hidden="true"></span>
+        <span>Profile</span>
+      </a>
+
+    </nav>
+
+  </div>
+</body>
+</html>

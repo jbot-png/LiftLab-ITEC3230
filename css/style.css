@@ -1,887 +1,986 @@
+
 /* Main colours for the whole app */
-
 :root {
-
     --green: #08752a;
-
     --dark-green: #05551d;
-
     --light-green: #e9f8e9;
-
     --white: #ffffff;
-
     --background: #e9eeea;
-
     --text: #202820;
-
     --gray: #666666;
-
     --border: #d8ded8;
-
 }
-
-
 
 /* Basic styling for every page */
-
 * {
-
     box-sizing: border-box;
-
 }
-
-
 
 body {
-
     margin: 0;
-
     min-height: 100vh;
-
     min-height: 100dvh;
-
     font-family: Arial, sans-serif;
-
     background-color: var(--background);
-
     color: var(--text);
-
-
 
     /* Keeps the mobile layout centered on desktop */
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     padding: 16px;
-
 }
-
-
 
 /* Main container for our website */
-
 .app-shell {
-
     width: 100%;
-
     max-width: 390px;
-
     height: min(844px, calc(100dvh - 32px));
-
     background-color: var(--white);
-
     border-radius: 22px;
-
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.12);
-
     overflow: hidden;
 
-
-
     display: flex;
-
     flex-direction: column;
-
 }
-
-
 
 /* Header used across the app */
-
 .app-header {
-
     background-color: var(--light-green);
-
     min-height: 68px;
-
     padding: 14px 18px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     position: relative;
-
     border-bottom: 1px solid var(--border);
-
 }
-
-
 
 /* Lift Lab logo and name */
-
 .brand {
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     gap: 8px;
-
     color: var(--dark-green);
-
     font-size: 26px;
-
     font-weight: bold;
-
 }
-
-
 
 .brand-icon {
-
     display: flex;
-
     align-items: center;
-
     color: var(--green);
-
 }
-
-
 
 /* Back arrow for other pages */
-
 .back-link {
-
     position: absolute;
-
     left: 16px;
-
     top: 50%;
-
     transform: translateY(-50%);
-
     color: var(--dark-green);
-
     text-decoration: none;
-
     font-size: 26px;
-
     padding: 6px;
-
 }
-
-
 
 /* Main content area */
-
 .app-main {
-
     flex: 1;
-
     min-height: 0;
-
     padding: 22px 18px;
-
     overflow-y: auto;
-
 }
-
-
 
 /* Welcome Back heading */
-
 .page-title {
-
     margin: 0 0 22px;
-
     font-size: 27px;
-
     font-weight: bold;
-
     letter-spacing: -0.5px;
-
 }
-
-
 
 /* Main homepage menu */
-
 .home-actions {
-
     display: flex;
-
     flex-direction: column;
-
     gap: 11px;
-
 }
-
-
 
 /* Each clickable menu option */
-
 .action-row {
-
     display: flex;
-
     align-items: center;
-
     gap: 13px;
-
     min-height: 65px;
-
     padding: 13px 15px;
 
-
-
     background-color: var(--white);
-
     border: 1px solid var(--border);
-
     border-radius: 11px;
 
-
-
     text-decoration: none;
-
     color: var(--text);
-
     transition: background-color 0.2s;
-
 }
-
-
 
 /* Gives feedback when the user hovers */
-
 .action-row:hover {
-
     background-color: var(--light-green);
-
     border-color: var(--green);
-
 }
-
-
 
 /* Icons beside menu labels */
-
 .action-icon {
-
     width: 30px;
-
     min-width: 30px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     color: var(--green);
-
 }
-
-
 
 /* Text and description inside each row */
-
 .action-copy {
-
     display: flex;
-
     flex-direction: column;
-
     gap: 4px;
-
     flex: 1;
-
 }
-
-
 
 .action-copy strong {
-
     font-size: 16px;
-
     font-weight: 600;
-
 }
-
-
 
 .action-copy small {
-
     font-size: 12px;
-
     color: var(--gray);
-
 }
-
-
 
 /* Arrow on the right side */
-
 .chevron {
-
     display: flex;
-
     color: var(--green);
-
     align-items: center;
-
 }
-
-
 
 /* Daily Check-In is highlighted green */
-
 .action-row--featured {
-
     background-color: var(--green);
-
     border-color: var(--green);
-
     color: var(--white);
-
 }
-
-
 
 .action-row--featured .action-icon,
-
 .action-row--featured .chevron {
-
     color: var(--white);
-
 }
-
-
 
 .action-row--featured:hover {
-
     background-color: var(--dark-green);
-
     border-color: var(--dark-green);
-
 }
-
-
 
 /* Shared green buttons for all group pages */
-
 .primary-btn {
-
     width: 100%;
-
     display: block;
-
     padding: 15px;
-
     background-color: var(--green);
-
     color: var(--white);
-
     border: none;
-
     border-radius: 9px;
-
     text-decoration: none;
-
     text-align: center;
-
     font-size: 15px;
-
     font-weight: bold;
-
     cursor: pointer;
-
 }
-
-
 
 .primary-btn:hover {
-
     background-color: var(--dark-green);
-
 }
-
-
 
 /* Outlined buttons for secondary actions */
-
 .secondary-btn {
-
     width: 100%;
-
     display: block;
-
     padding: 14px;
-
     background-color: var(--white);
-
     color: var(--green);
-
     border: 1px solid var(--green);
-
     border-radius: 9px;
-
     text-decoration: none;
-
     text-align: center;
-
     font-size: 15px;
-
     font-weight: bold;
-
     cursor: pointer;
-
 }
-
-
 
 /* Bottom navigation used on every page */
-
 .bottom-nav {
-
     display: flex;
-
     justify-content: space-around;
-
     background-color: var(--white);
-
     border-top: 1px solid var(--border);
-
     padding: 9px 5px;
-
     padding-bottom: max(9px, env(safe-area-inset-bottom));
-
     flex-shrink: 0;
-
 }
-
-
 
 .nav-link {
-
     flex: 1;
-
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
-
     align-items: center;
-
     gap: 5px;
 
-
-
     padding: 6px 2px;
-
     color: var(--text);
-
     text-decoration: none;
-
     font-size: 11px;
-
     border-radius: 8px;
-
 }
-
-
 
 /* Highlights the current page */
-
 .nav-link.active {
-
     color: var(--green);
-
     font-weight: bold;
-
 }
-
-
 
 .nav-link:hover {
-
     color: var(--green);
-
     background-color: var(--light-green);
-
 }
-
-
 
 /* Sets a consistent size for our icons */
-
 [data-icon] svg {
-
     width: 24px;
-
     height: 24px;
-
     display: block;
-
 }
-
-
 
 /* Makes keyboard selection visible */
-
 a:focus-visible,
-
 button:focus-visible,
-
 input:focus-visible {
-
     outline: 3px solid var(--green);
-
     outline-offset: 3px;
-
 }
-
-
 
 /* Mobile screens use their full available width */
-
 @media (max-width: 600px) {
-
     body {
-
         padding: 0;
-
         display: block;
-
         background-color: var(--white);
-
     }
-
-
 
     .app-shell {
-
         max-width: 100%;
-
         height: 100vh;
-
         height: 100dvh;
-
         border-radius: 0;
-
         box-shadow: none;
-
     }
-
-
 
     .app-main {
-
         padding: 20px 16px;
-
     }
-
 }
-
-
 
 /* Small phone adjustments */
-
 @media (max-width: 360px) {
-
     .page-title {
-
         font-size: 24px;
-
     }
-
-
 
     .action-row {
-
         min-height: 58px;
-
         padding: 11px 12px;
-
     }
-
-
 
     .action-copy strong {
-
         font-size: 14px;
-
     }
-
 }
-
-
-
-
 
 
 
 /* Daily Check-In page */
 
-
-
 /* Heading and description */
-
 .checkin-title {
-
     font-size: 25px;
-
     margin: 0 0 10px;
-
     letter-spacing: -0.5px;
-
 }
-
-
 
 .checkin-description {
-
     font-size: 14px;
-
     color: var(--gray);
-
     line-height: 1.5;
-
     margin: 0 0 24px;
-
 }
-
-
 
 /* Removes the default fieldset border */
-
 .energy-options {
-
     border: none;
-
     padding: 0;
-
     margin: 0 0 20px;
-
     display: flex;
-
     flex-direction: column;
-
     gap: 12px;
-
 }
-
-
 
 /* Each selectable energy level */
-
 .energy-option {
-
     display: flex;
-
     align-items: center;
-
     gap: 14px;
-
     min-height: 74px;
-
     padding: 13px 15px;
-
     border: 1px solid var(--border);
-
     border-radius: 11px;
-
     background-color: var(--white);
-
     cursor: pointer;
-
     transition: background-color 0.2s, border-color 0.2s;
-
 }
-
-
 
 /* Gives feedback when hovering over an option */
-
 .energy-option:hover {
-
     border-color: var(--green);
-
     background-color: #f6fbf6;
-
 }
-
-
 
 /* Highlights the selected option */
-
 .energy-option:has(input:checked) {
-
     background-color: var(--light-green);
-
     border: 2px solid var(--green);
-
 }
-
-
 
 /* Makes the selected option visible with a keyboard */
-
 .energy-option:has(input:focus-visible) {
-
     outline: 3px solid var(--green);
-
     outline-offset: 3px;
-
 }
-
-
 
 /* Faces beside each energy option */
-
 .energy-face {
-
     font-size: 29px;
-
     width: 36px;
-
     text-align: center;
-
     flex-shrink: 0;
-
 }
-
-
 
 /* Energy level name and description */
-
 .energy-text {
-
     display: flex;
-
     flex-direction: column;
-
     gap: 4px;
-
     flex: 1;
-
 }
-
-
 
 .energy-text strong {
-
     font-size: 17px;
-
 }
-
-
 
 .energy-text small {
-
     font-size: 12px;
-
     color: var(--gray);
-
 }
-
-
 
 /* Radio buttons on the right side */
-
 .energy-option input[type="radio"] {
-
     width: 19px;
-
     height: 19px;
-
     margin: 0;
-
     accent-color: var(--green);
-
     cursor: pointer;
-
 }
-
-
 
 /* Message if the user hasn't selected an option */
-
 .form-error {
-
     color: #b42318;
-
     font-size: 13px;
-
     margin: 0 0 14px;
-
 }
-
-
 
 /* Keep hidden messages hidden */
-
 .form-error[hidden] {
-
     display: none;
-
 }
-
-
 
 /* Hides extra text visually but keeps it for screen readers */
-
 .sr-only {
-
     position: absolute;
-
     width: 1px;
-
     height: 1px;
-
     padding: 0;
-
     margin: -1px;
-
     overflow: hidden;
-
     clip: rect(0, 0, 0, 0);
-
     white-space: nowrap;
-
     border: 0;
+}
 
+/* Smaller spacing for short phone screens */
+@media (max-height: 700px) {
+    .checkin-description {
+        margin-bottom: 16px;
+    }
+
+    .energy-options {
+        gap: 9px;
+    }
+
+    .energy-option {
+        min-height: 62px;
+        padding: 10px 12px;
+    }
 }
 
 
 
-/* Smaller spacing for short phone screens */
+/* Part 3 - Customize, Current Workout and Summary pages (Theo) */
 
-@media (max-height: 700px) {
+/* Keeps hidden sections hidden even if they use display: flex */
+.app-main [hidden] {
+    display: none !important;
+}
 
-    .checkin-description {
+/* Lets the main buttons sit at the bottom of the screen */
+.app-main--stack {
+    display: flex;
+    flex-direction: column;
+}
 
-        margin-bottom: 16px;
+.page-actions {
+    margin-top: auto;
+    padding-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-    }
+/* Centered page heading */
+.page-heading {
+    text-align: center;
+    margin-bottom: 16px;
+}
 
+.section-title {
+    font-size: 24px;
+    margin: 0 0 6px;
+    letter-spacing: -0.5px;
+}
 
+.page-subtitle,
+.section-description {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.4;
+    margin: 0;
+}
 
-    .energy-options {
+/* Arrows beside "Exercise 1 of 5" */
+.exercise-pager {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
 
-        gap: 9px;
+.pager-btn {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background-color: var(--white);
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
 
-    }
+.pager-btn [data-icon] svg {
+    width: 18px;
+    height: 18px;
+}
 
+.pager-btn:hover:not(:disabled) {
+    background-color: var(--light-green);
+    border-color: var(--green);
+}
 
+.pager-btn:disabled {
+    color: #c4c4c4;
+    cursor: not-allowed;
+}
 
-    .energy-option {
+/* Stick-figure exercise pictures */
+.exercise-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        min-height: 62px;
+.exercise-icon svg {
+    width: 100%;
+    height: 100%;
+}
 
-        padding: 10px 12px;
+.exercise-icon--large {
+    width: 54px;
+    height: 54px;
+}
 
-    }
+/* Green card for the exercise being customized */
+.current-exercise {
+    padding: 14px;
+    margin-bottom: 18px;
+    background-color: var(--light-green);
+    border: 2px solid var(--green);
+    border-radius: 12px;
+}
 
+.current-exercise-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.current-exercise-copy {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.current-exercise-copy strong {
+    font-size: 17px;
+}
+
+.current-exercise-copy strong:focus {
+    outline: none;
+}
+
+.current-exercise-copy small {
+    font-size: 12px;
+    color: var(--gray);
+}
+
+.swap-icon {
+    color: var(--green);
+    display: flex;
+}
+
+/* Small link-style button (Undo) */
+.text-btn {
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Sets and reps +/- controls */
+.stepper-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.stepper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stepper-label {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.stepper-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 3px;
+}
+
+.stepper-btn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--light-green);
+    color: var(--dark-green);
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.stepper-btn:hover:not(:disabled) {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.stepper-btn:disabled {
+    background-color: #f2f2f2;
+    color: #b5b5b5;
+    cursor: not-allowed;
+}
+
+.stepper-value {
+    font-size: 17px;
+    font-weight: bold;
+    min-width: 30px;
+    text-align: center;
+}
+
+.limit-hint {
+    font-size: 11px;
+    color: var(--gray);
+    text-align: right;
+    margin: 8px 0 0;
+}
+
+/* "Replace With" list */
+.list-heading {
+    font-size: 16px;
+    margin: 0 0 10px;
+}
+
+.replace-options {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.replace-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background-color: var(--white);
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.replace-option:hover {
+    border-color: var(--green);
+}
+
+.replace-option:has(input:checked) {
+    background-color: var(--light-green);
+    border: 2px solid var(--green);
+    padding: 7px 13px;
+}
+
+.replace-option:has(input:focus-visible) {
+    outline: 3px solid var(--green);
+    outline-offset: 3px;
+}
+
+.replace-name {
+    flex: 1;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.replace-option input {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    accent-color: var(--green);
+    cursor: pointer;
+}
+
+/* Message shown after replacing */
+.status-message {
+    font-size: 13px;
+    color: var(--dark-green);
+    min-height: 18px;
+    margin: 10px 0 0;
+}
+
+/* Two buttons side by side */
+.button-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Progress bar on the workout page */
+.progress-block {
+    margin-bottom: 16px;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.progress-percent {
+    color: var(--green);
+}
+
+.progress-track {
+    height: 10px;
+    background-color: var(--border);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0;
+    background-color: var(--green);
+    border-radius: 5px;
+    transition: width 0.3s;
+}
+
+/* Exercise checklist */
+.checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.check-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background-color: #f7f7f7;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.check-item:hover {
+    border-color: var(--green);
+}
+
+/* Hide the real checkbox but keep it usable */
+.check-item input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+/* Our own checkbox square */
+.check-box {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    border: 2px solid var(--gray);
+    border-radius: 5px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+}
+
+.check-box [data-icon] svg {
+    width: 16px;
+    height: 16px;
+}
+
+.check-item:has(input:checked) {
+    background-color: var(--light-green);
+    border-color: var(--green);
+}
+
+.check-item:has(input:checked) .check-box {
+    background-color: var(--green);
+    border-color: var(--green);
+    color: var(--white);
+}
+
+.check-item:has(input:checked) .check-text strong {
+    text-decoration: line-through;
+    color: var(--gray);
+}
+
+.check-item:has(input:focus-visible) {
+    outline: 3px solid var(--green);
+    outline-offset: 3px;
+}
+
+.check-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex: 1;
+}
+
+.check-text strong {
+    font-size: 15px;
+}
+
+.check-text small {
+    font-size: 12px;
+    color: var(--gray);
+}
+
+/* Warning before finishing early */
+.finish-warning {
+    padding: 14px;
+    background-color: #fff8e6;
+    border: 1px solid #e6b84d;
+    border-radius: 11px;
+}
+
+.finish-warning p {
+    margin: 0 0 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Summary page */
+.summary-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-hero {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.summary-badge {
+    width: 130px;
+    height: 87px;
+    color: var(--green);
+    display: block;
+    margin: 0 auto 6px;
+}
+
+.summary-card {
+    margin: 0;
+    padding: 4px 16px;
+    background-color: var(--light-green);
+    border: 2px solid var(--green);
+    border-radius: 12px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #c9e3c9;
+}
+
+.summary-row:last-child {
+    border-bottom: none;
+}
+
+.summary-row dt {
+    font-size: 14px;
+}
+
+.summary-row dd {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.summary-changes {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.summary-changes span,
+.summary-row dd.summary-changes {
+    font-size: 13px;
+}
+
+/* Green box confirming the workout was saved */
+.save-confirmation {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    background-color: var(--light-green);
+    border: 2px solid var(--green);
+    border-radius: 11px;
+}
+
+.save-confirmation:focus {
+    outline: none;
+}
+
+.save-confirmation span:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.save-confirmation small {
+    font-size: 13px;
+    color: var(--gray);
+}
+
+.save-confirmation-icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: var(--green);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.save-confirmation-icon svg {
+    width: 17px !important;
+    height: 17px !important;
+}
+
+.summary-empty {
+    text-align: center;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }

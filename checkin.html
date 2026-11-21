@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Daily Check-In | Lift Lab</title>
+
+    <!-- Using the same design as the homepage -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Shared functions and the check-in code -->
+    <script src="js/shared.js" defer></script>
+    <script src="js/checkin.js" defer></script>
+</head>
+
+<body>
+    <div class="app-shell">
+
+        <!-- Header with a back button -->
+        <header class="app-header">
+
+            <a href="index.html" class="back-link"
+               aria-label="Back to home">
+                &#8592;
+            </a>
+
+            <div class="brand">
+                <span class="brand-icon"
+                      data-icon="dumbbell"
+                      aria-hidden="true"></span>
+                <span>Lift Lab</span>
+            </div>
+
+        </header>
+
+        <!-- Main check-in page -->
+        <main class="app-main">
+
+            <section class="checkin-section">
+
+                <h1 class="checkin-title">
+                    How do you feel today?
+                </h1>
+
+                <p class="checkin-description">
+                    Select how you're feeling so we can
+                    find a workout that suits you.
+                </p>
+
+                <!-- User chooses their energy level -->
+                <form id="checkin-form" novalidate>
+
+                    <fieldset class="energy-options">
+                        <legend class="sr-only">
+                            Select your energy level
+                        </legend>
+
+                        <!-- Great option -->
+                        <label class="energy-option">
+
+                            <span class="energy-face"
+                                  aria-hidden="true">😊</span>
+
+                            <span class="energy-text">
+                                <strong>Great</strong>
+                                <small>Full energy</small>
+                            </span>
+
+                            <input type="radio"
+                                   name="energy"
+                                   value="great">
+
+                        </label>
+
+                        <!-- Fine option -->
+                        <label class="energy-option">
+
+                            <span class="energy-face"
+                                  aria-hidden="true">🙂</span>
+
+                            <span class="energy-text">
+                                <strong>Fine</strong>
+                                <small>Okay to work out</small>
+                            </span>
+
+                            <input type="radio"
+                                   name="energy"
+                                   value="fine">
+
+                        </label>
+
+                        <!-- Tired option -->
+                        <label class="energy-option">
+
+                            <span class="energy-face"
+                                  aria-hidden="true">😴</span>
+
+                            <span class="energy-text">
+                                <strong>Tired</strong>
+                                <small>Lower energy</small>
+                            </span>
+
+                            <input type="radio"
+                                   name="energy"
+                                   value="tired">
+
+                        </label>
+
+                        <!-- Unwell option -->
+                        <label class="energy-option">
+
+                            <span class="energy-face"
+                                  aria-hidden="true">😟</span>
+
+                            <span class="energy-text">
+                                <strong>Unwell</strong>
+                                <small>Need rest</small>
+                            </span>
+
+                            <input type="radio"
+                                   name="energy"
+                                   value="unwell">
+
+                        </label>
+
+                    </fieldset>
+
+                    <!-- Shows a message if nothing is selected -->
+                    <p id="checkin-error"
+                       class="form-error"
+                       role="alert"
+                       hidden>
+                        Please select how you're feeling.
+                    </p>
+
+                    <!-- Saves the choice and continues -->
+                    <button type="submit" class="primary-btn">
+                        Continue
+                    </button>
+
+                </form>
+
+            </section>
+
+        </main>
+
+        <!-- Same bottom navigation as the homepage -->
+        <nav class="bottom-nav" aria-label="Main navigation">
+
+            <a class="nav-link" href="index.html">
+                <span data-icon="home"
+                      aria-hidden="true"></span>
+                <span>Home</span>
+            </a>
+
+            <a class="nav-link" href="preferences.html">
+                <span data-icon="dumbbell"
+                      aria-hidden="true"></span>
+                <span>Workouts</span>
+            </a>
+
+            <a class="nav-link" href="progress.html">
+                <span data-icon="chart"
+                      aria-hidden="true"></span>
+                <span>Progress</span>
+            </a>
+
+            <a class="nav-link" href="profile.html">
+                <span data-icon="user"
+                      aria-hidden="true"></span>
+                <span>Profile</span>
+            </a>
+
+        </nav>
+
+    </div>
+</body>
+</html>
