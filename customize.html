@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Customize Workout | Lift Lab</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/shared.js" defer></script>
+    <script src="js/exercise-icons.js" defer></script>
+    <script src="js/workout.js" defer></script>
+</head>
+
+<body data-page="customize">
+    <div class="app-shell">
+
+        <!-- Header with a back button to Omar's recommendation -->
+        <header class="app-header">
+            <a href="recommendations.html" class="back-link"
+               aria-label="Back to recommendation">
+                &#8592;
+            </a>
+
+            <div class="brand">
+                <span class="brand-icon" data-icon="dumbbell" aria-hidden="true"></span>
+                <span>Lift Lab</span>
+            </div>
+        </header>
+
+        <main class="app-main app-main--stack">
+
+            <!-- Title, plus arrows to move between exercises -->
+            <div class="page-heading">
+                <h1 class="section-title">Customize Workout</h1>
+
+                <div class="exercise-pager">
+                    <button type="button" id="prev-exercise" class="pager-btn"
+                            aria-label="Previous exercise">
+                        <span data-icon="chevron-left" aria-hidden="true"></span>
+                    </button>
+
+                    <p id="exercise-position" class="page-subtitle" aria-live="polite">
+                        Exercise 1 of 5
+                    </p>
+
+                    <button type="button" id="next-exercise" class="pager-btn"
+                            aria-label="Next exercise">
+                        <span data-icon="chevron-right" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- The exercise being customized (filled in by workout.js) -->
+            <section class="current-exercise" aria-labelledby="current-name">
+
+                <div class="current-exercise-head">
+                    <span id="current-icon" class="exercise-icon exercise-icon--large"></span>
+
+                    <span class="current-exercise-copy">
+                        <strong id="current-name" tabindex="-1">Exercise</strong>
+                        <small id="replaced-note" hidden>
+                            Replaces <span id="original-name"></span>.
+                            <button type="button" id="undo-replace" class="text-btn">Undo</button>
+                        </small>
+                    </span>
+
+                    <span class="swap-icon" data-icon="swap" aria-hidden="true"></span>
+                </div>
+
+                <!-- Sets and reps -->
+                <div class="stepper-row">
+                    <div class="stepper">
+                        <span class="stepper-label" id="sets-label">Sets</span>
+                        <div class="stepper-controls" role="group" aria-labelledby="sets-label">
+                            <button type="button" id="sets-minus" class="stepper-btn"
+                                    data-field="sets" data-change="-1"
+                                    aria-label="Decrease sets">-</button>
+                            <output id="sets-value" class="stepper-value"
+                                    aria-live="polite">3</output>
+                            <button type="button" id="sets-plus" class="stepper-btn"
+                                    data-field="sets" data-change="1"
+                                    aria-label="Increase sets">+</button>
+                        </div>
+                    </div>
+
+                    <div class="stepper">
+                        <span class="stepper-label" id="reps-label">Reps</span>
+                        <div class="stepper-controls" role="group" aria-labelledby="reps-label">
+                            <button type="button" id="reps-minus" class="stepper-btn"
+                                    data-field="reps" data-change="-1"
+                                    aria-label="Decrease reps">-</button>
+                            <output id="reps-value" class="stepper-value"
+                                    aria-live="polite">10</output>
+                            <button type="button" id="reps-plus" class="stepper-btn"
+                                    data-field="reps" data-change="1"
+                                    aria-label="Increase reps">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <p id="limit-hint" class="limit-hint">Sets 1-10 | Reps 1-30</p>
+            </section>
+
+            <!-- Other exercises for the same muscle (filled in by workout.js) -->
+            <h2 class="list-heading">Replace With</h2>
+            <fieldset id="replace-options" class="replace-options"></fieldset>
+
+            <!-- Short message after a change, read out by screen readers -->
+            <p id="customize-status" class="status-message"
+               role="status" aria-live="polite"></p>
+
+            <div class="page-actions">
+                <button type="button" id="save-changes" class="primary-btn">
+                    Save Changes
+                </button>
+            </div>
+
+        </main>
+
+        <!-- Same bottom navigation as the other pages -->
+        <nav class="bottom-nav" aria-label="Main navigation">
+            <a class="nav-link" href="index.html">
+                <span data-icon="home" aria-hidden="true"></span>
+                <span>Home</span>
+            </a>
+
+            <a class="nav-link active" href="preferences.html" aria-current="page">
+                <span data-icon="dumbbell" aria-hidden="true"></span>
+                <span>Workouts</span>
+            </a>
+
+            <a class="nav-link" href="progress.html">
+                <span data-icon="chart" aria-hidden="true"></span>
+                <span>Progress</span>
+            </a>
+
+            <a class="nav-link" href="profile.html">
+                <span data-icon="user" aria-hidden="true"></span>
+                <span>Profile</span>
+            </a>
+        </nav>
+
+    </div>
+</body>
+</html>
