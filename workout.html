@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Current Workout | Lift Lab</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/shared.js" defer></script>
+    <script src="js/exercise-icons.js" defer></script>
+    <script src="js/workout.js" defer></script>
+</head>
+
+<body data-page="workout">
+    <div class="app-shell">
+
+        <!-- Header with a back button to the customize screen -->
+        <header class="app-header">
+            <a href="customize.html" class="back-link"
+               aria-label="Back to customize workout">
+                &#8592;
+            </a>
+
+            <div class="brand">
+                <span class="brand-icon" data-icon="dumbbell" aria-hidden="true"></span>
+                <span>Lift Lab</span>
+            </div>
+        </header>
+
+        <main class="app-main app-main--stack">
+
+            <div class="page-heading">
+                <h1 class="section-title">Current Workout</h1>
+                <p id="workout-subtitle" class="page-subtitle">Upper Body</p>
+            </div>
+
+            <!-- Progress bar -->
+            <div class="progress-block">
+                <div class="progress-label">
+                    <span id="workout-count">0 of 5 done</span>
+                    <span id="progress-percent" class="progress-percent">0%</span>
+                </div>
+                <div id="progress-track" class="progress-track"
+                     role="progressbar" aria-label="Workout progress"
+                     aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+            </div>
+
+            <!-- Exercise checklist (filled in by workout.js) -->
+            <ul id="checklist" class="checklist" aria-label="Exercises"></ul>
+
+            <div class="page-actions">
+                <!-- Shown if the user finishes with exercises left -->
+                <div id="finish-warning" class="finish-warning" role="alert" hidden>
+                    <p id="finish-warning-text"></p>
+                    <div class="button-row">
+                        <button type="button" id="keep-going" class="secondary-btn">
+                            Keep Going
+                        </button>
+                        <button type="button" id="finish-anyway" class="primary-btn">
+                            Finish Anyway
+                        </button>
+                    </div>
+                </div>
+
+                <button type="button" id="finish-workout" class="primary-btn">
+                    Finish Workout
+                </button>
+            </div>
+
+        </main>
+
+        <nav class="bottom-nav" aria-label="Main navigation">
+            <a class="nav-link" href="index.html">
+                <span data-icon="home" aria-hidden="true"></span>
+                <span>Home</span>
+            </a>
+
+            <a class="nav-link active" href="preferences.html" aria-current="page">
+                <span data-icon="dumbbell" aria-hidden="true"></span>
+                <span>Workouts</span>
+            </a>
+
+            <a class="nav-link" href="progress.html">
+                <span data-icon="chart" aria-hidden="true"></span>
+                <span>Progress</span>
+            </a>
+
+            <a class="nav-link" href="profile.html">
+                <span data-icon="user" aria-hidden="true"></span>
+                <span>Profile</span>
+            </a>
+        </nav>
+
+    </div>
+</body>
+</html>

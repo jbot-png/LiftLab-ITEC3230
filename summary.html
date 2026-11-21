@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Workout Summary | Lift Lab</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/shared.js" defer></script>
+    <script src="js/workout.js" defer></script>
+</head>
+
+<body data-page="summary">
+    <div class="app-shell">
+
+        <header class="app-header">
+            <a href="index.html" class="back-link" aria-label="Back to home">
+                &#8592;
+            </a>
+
+            <div class="brand">
+                <span class="brand-icon" data-icon="dumbbell" aria-hidden="true"></span>
+                <span>Lift Lab</span>
+            </div>
+        </header>
+
+        <main class="app-main app-main--stack">
+
+            <!-- Summary of the finished workout (filled in by workout.js) -->
+            <div id="summary-content" class="summary-content">
+
+                <div class="summary-hero">
+                    <!-- Check mark with celebration lines -->
+                    <svg class="summary-badge" viewBox="0 0 120 80" aria-hidden="true">
+                        <g stroke="currentColor" stroke-width="5" stroke-linecap="round">
+                            <line x1="20" y1="22" x2="30" y2="28"/>
+                            <line x1="16" y1="42" x2="28" y2="42"/>
+                            <line x1="20" y1="62" x2="30" y2="56"/>
+                            <line x1="100" y1="22" x2="90" y2="28"/>
+                            <line x1="104" y1="42" x2="92" y2="42"/>
+                            <line x1="100" y1="62" x2="90" y2="56"/>
+                        </g>
+                        <circle cx="60" cy="42" r="26" fill="currentColor"/>
+                        <path d="M48 42l8 8 16-17" fill="none" stroke="#ffffff"
+                              stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    <h1 class="section-title">Workout Summary</h1>
+                    <p id="summary-subtitle" class="page-subtitle"></p>
+                </div>
+
+                <dl class="summary-card">
+                    <div class="summary-row">
+                        <dt>Exercises</dt>
+                        <dd id="stat-exercises">0 / 0</dd>
+                    </div>
+                    <div class="summary-row">
+                        <dt>Duration</dt>
+                        <dd id="stat-time">0 min</dd>
+                    </div>
+                    <div class="summary-row">
+                        <dt>Total Sets</dt>
+                        <dd id="stat-sets">0</dd>
+                    </div>
+                    <div class="summary-row">
+                        <dt>Changed</dt>
+                        <dd id="stat-changed" class="summary-changes">None</dd>
+                    </div>
+                </dl>
+
+                <div class="page-actions">
+                    <!-- Save confirmation, shown after Save to History -->
+                    <div id="save-confirmation" class="save-confirmation"
+                         role="status" tabindex="-1" hidden>
+                        <span class="save-confirmation-icon" data-icon="check" aria-hidden="true"></span>
+                        <span>
+                            <strong>Workout saved!</strong>
+                            <small>Your progress tracker has been updated.</small>
+                        </span>
+                    </div>
+
+                    <button type="button" id="save-workout" class="primary-btn">
+                        Save to History
+                    </button>
+                    <a href="progress.html" id="view-progress" class="primary-btn" hidden>
+                        View Progress
+                    </a>
+                    <a href="index.html" class="secondary-btn">Back to Home</a>
+                </div>
+
+            </div>
+
+            <!-- Shown if the user opens this page before finishing a workout -->
+            <div id="summary-empty" class="summary-empty" hidden>
+                <h1 class="section-title">No workout to show yet</h1>
+                <p class="page-subtitle">
+                    Finish a workout and your summary will appear here.
+                </p>
+                <a href="customize.html" class="primary-btn">Start a Workout</a>
+            </div>
+
+        </main>
+
+        <nav class="bottom-nav" aria-label="Main navigation">
+            <a class="nav-link" href="index.html">
+                <span data-icon="home" aria-hidden="true"></span>
+                <span>Home</span>
+            </a>
+
+            <a class="nav-link active" href="preferences.html" aria-current="page">
+                <span data-icon="dumbbell" aria-hidden="true"></span>
+                <span>Workouts</span>
+            </a>
+
+            <a class="nav-link" href="progress.html">
+                <span data-icon="chart" aria-hidden="true"></span>
+                <span>Progress</span>
+            </a>
+
+            <a class="nav-link" href="profile.html">
+                <span data-icon="user" aria-hidden="true"></span>
+                <span>Profile</span>
+            </a>
+        </nav>
+
+    </div>
+</body>
+</html>
