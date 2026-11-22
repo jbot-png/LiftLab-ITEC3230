@@ -16,7 +16,7 @@
 */
 
 const KEYS = {
-    recommended: "liftlab_workout",
+    recommended: "liftlab_selectedWorkout",
     custom: "liftlab_custom_workout",
     progress: "liftlab_progress",
     lastSession: "liftlab_last_session",
@@ -26,12 +26,12 @@ const KEYS = {
 
 // Exercises the user can swap between (each one has a picture in exercise-icons.js)
 const EXERCISE_LIBRARY = {
-    chest: { unit: "reps", options: ["Bench Press", "Dumbbell Press", "Push-Ups", "Machine Chest Press"] },
+    chest: { unit: "reps", options: ["Bench Press", "Dumbbell Press", "Dumbbell Floor Press", "Push-Ups", "Machine Chest Press"] },
     back: { unit: "reps", options: ["Dumbbell Row", "Bent-Over Row", "Lat Pulldown", "Seated Cable Row"] },
     shoulders: { unit: "reps", options: ["Shoulder Press", "Lateral Raise", "Front Raise", "Upright Row"] },
-    biceps: { unit: "reps", options: ["Bicep Curl", "Hammer Curl", "Cable Curl"] },
+    biceps: { unit: "reps", options: ["Bicep Curl", "Dumbbell Curl", "Hammer Curl", "Cable Curl"] },
     triceps: { unit: "reps", options: ["Tricep Pushdown", "Tricep Dips", "Overhead Extension"] },
-    legs: { unit: "reps", options: ["Squats", "Lunges", "Leg Press", "Glute Bridge"] },
+    legs: { unit: "reps", options: ["Squats", "Goblet Squat", "Lunges", "Leg Press", "Glute Bridge"] },
     core: { unit: "sec", options: ["Plank", "Side Plank", "Mountain Climbers"] }
 };
 
