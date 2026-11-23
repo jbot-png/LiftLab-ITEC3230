@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +10,8 @@
     <link rel="stylesheet" href="css/schedule.css">
     <script src="js/shared.js" defer></script>
     <script src="js/schedule.js" defer></script>
+    <!-- Update weekly progress using saved workouts -->
+    <script src="js/progress.js" defer></script>
 </head>
 
 <body data-page="progress">
@@ -39,7 +42,10 @@
                     <span class="label">Tues</span>
                     <div class="bar" style="width: 60%;">60 mins</div>
                 </div>
-                <div class="bar-col activeDay">
+
+                <!-- Keep this row the same style as the other days -->
+                <div class="bar-col">
+
                     <span class="label">Wed</span>
                     <div class="bar"></div>
                 </div>

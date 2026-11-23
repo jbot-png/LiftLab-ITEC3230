@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile | Lift Lab</title>
+
+  <!-- Same CSS and JS used across our app -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/shared.js" defer></script>
+</head>
+
+<body>
+  <div class="app-shell">
+
+    <!-- Same header style as the other pages -->
+    <header class="app-header">
+      <a href="index.html" class="back-link" aria-label="Back to home">
+        &larr;
+      </a>
+
+      <div class="brand">
+        <span class="brand-icon" data-icon="dumbbell" aria-hidden="true"></span>
+        <span>Lift Lab</span>
+      </div>
+    </header>
+
+    <main class="app-main">
+
+      <h1 class="page-title">My Profile</h1>
+
+      <div class="home-actions">
+
+        <!-- Basic user information for our prototype -->
+        <div class="action-row">
+          <span class="action-icon" data-icon="user" aria-hidden="true"></span>
+          <span class="action-copy">
+            <strong>Demo User</strong>
+            <small>Your fitness profile</small>
+          </span>
+        </div>
+
+        <!-- Links to the main workout features -->
+        <h2 style="font-size: 19px; margin: 20px 0 5px;">
+          Manage Your Workouts
+        </h2>
+
+        <!-- Change workout goals, time and equipment -->
+        <a class="action-row" href="preferences.html">
+          <span class="action-icon" data-icon="dumbbell" aria-hidden="true"></span>
+          <span class="action-copy">
+            <strong>Workout Preferences</strong>
+            <small>Set your goals, time and equipment</small>
+          </span>
+          <span class="chevron" data-icon="chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <!-- View the workout schedule -->
+        <a class="action-row" href="schedule.html">
+          <span class="action-icon" data-icon="calendar" aria-hidden="true"></span>
+          <span class="action-copy">
+            <strong>Workout Schedule</strong>
+            <small>View and manage planned workouts</small>
+          </span>
+          <span class="chevron" data-icon="chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <!-- View workout progress -->
+        <a class="action-row" href="progress.html">
+          <span class="action-icon" data-icon="chart" aria-hidden="true"></span>
+          <span class="action-copy">
+            <strong>Progress Tracker</strong>
+            <small>See your workout activity</small>
+          </span>
+          <span class="chevron" data-icon="chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <!-- No account system is needed for our prototype -->
+        <p style="font-size: 13px; color: var(--gray); line-height: 1.5;">
+          This is a demo profile. Your workout preferences and
+          activity are saved locally in your browser.
+        </p>
+
+      </div>
+    </main>
+
+    <!-- Bottom navigation used on every page -->
+    <nav class="bottom-nav" aria-label="Main navigation">
+
+      <a class="nav-link" href="index.html">
+        <span data-icon="home" aria-hidden="true"></span>
+        <span>Home</span>
+      </a>
+
+      <a class="nav-link" href="preferences.html">
+        <span data-icon="dumbbell" aria-hidden="true"></span>
+        <span>Workouts</span>
+      </a>
+
+      <a class="nav-link" href="progress.html">
+        <span data-icon="chart" aria-hidden="true"></span>
+        <span>Progress</span>
+      </a>
+
+      <!-- Profile is highlighted since we are on this page -->
+      <a class="nav-link active" href="profile.html" aria-current="page">
+        <span data-icon="user" aria-hidden="true"></span>
+        <span>Profile</span>
+      </a>
+
+    </nav>
+
+  </div>
+</body>
+</html>
