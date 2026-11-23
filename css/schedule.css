@@ -45,72 +45,72 @@ ul {
 }
 
 .month {
-  padding: 35px 25px;
-  width: 100%;
-  background: var(--green);
-  text-align: center;
-  border-top-left-radius: 9px;
-  border-top-right-radius: 9px;
+    padding: 35px 25px;
+    width: 100%;
+    background: var(--green);
+    text-align: center;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
 }
 
 .month ul {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .month ul li {
-  color: var(--white);
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+    color: var(--white);
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 .month .prev {
-  float: left;
-  padding-top: 10px;
+    float: left;
+    padding-top: 10px;
 }
 
 /* Next button */
 .month .next {
-  float: right;
-  padding-top: 10px;
+    float: right;
+    padding-top: 10px;
 }
 
 /* Weekdays (Mon-Sun) */
 .weekdays {
-  margin: 0;
-  padding: 10px 10px;
-  background-color:#ddd;
+    margin: 0;
+    padding: 10px 10px;
+    background-color: #ddd;
 }
 
 .weekdays li {
-  display: inline-block;
-  width: 13%;
-  color: #666;
-  text-align: center;
+    display: inline-block;
+    width: 13%;
+    color: #666;
+    text-align: center;
 }
 
 /* Days (1-31) */
 .days {
-  padding: 10px 10px;
-  background: #eee;
-  margin: 0;
-  border-bottom-left-radius: 9px;
-  border-bottom-right-radius: 9px;
+    padding: 10px 10px;
+    background: #eee;
+    margin: 0;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
 }
 
 .days li {
-  list-style-type: none;
-  display: inline-block;
-  width: 13%;
-  height: 65px;
-  text-align: center;
-  margin-bottom: 5px;
-  font-size:18px;
-  color: var(--dark-green);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  padding: 10px;
+    list-style-type: none;
+    display: inline-block;
+    width: 13%;
+    height: 65px;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: var(--dark-green);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .days li:hover {
@@ -118,10 +118,26 @@ ul {
 }
 
 /* Highlight the "current" day */
+
 .activeDay {
-  background: var(--green);
-  color: white !important
+    background: var(--green);
+    color: white !important;
 }
+
+/* Make the selected workout's content visible */
+.activeDay .action-icon,
+.activeDay .action-icon *,
+.activeDay .action-copy,
+.activeDay .action-copy *,
+.activeDay .chevron,
+.activeDay .chevron *,
+.activeDay svg,
+.activeDay svg * {
+    color: white !important;
+    stroke: white !important;
+    fill: none;
+}
+
 
 .activeDay:hover {
     background-color: var(--dark-green) !important
@@ -136,7 +152,7 @@ ul {
     margin-top: 15px;
 }
 
-.workoutSelect{
+.workoutSelect {
     text-align: center;
     width: 100%;
 }
@@ -213,4 +229,38 @@ ul {
 .error {
     display: none;
     color: darkred;
+}
+
+
+/* Calendar navigation */
+.month .prev,
+.month .next {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Empty calendar spaces */
+.days .empty-date {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+
+/* Keep selected workout card readable */
+#weekDetail .action-row.activeDay,
+#weekDetail .action-row.activeDay:hover {
+    background-color: #08752a !important;
+    border-color: #08752a !important;
+    color: white !important;
+}
+
+/* Make every text label and icon visible */
+#weekDetail .action-row.activeDay strong,
+#weekDetail .action-row.activeDay small,
+#weekDetail .action-row.activeDay .action-icon,
+#weekDetail .action-row.activeDay .chevron,
+#weekDetail .action-row.activeDay svg {
+    color: white !important;
+    stroke: white !important;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,6 +8,28 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/schedule.css">
+
+    <style>
+        /* Keep the selected workout card readable */
+        #weekDetail .action-row.activeDay {
+            background-color: #08752a !important;
+            color: white !important;
+        }
+
+        #weekDetail .action-row.activeDay .action-icon,
+        #weekDetail .action-row.activeDay .action-copy,
+        #weekDetail .action-row.activeDay .action-copy strong,
+        #weekDetail .action-row.activeDay .action-copy small,
+        #weekDetail .action-row.activeDay .chevron {
+            color: white !important;
+        }
+
+        #weekDetail .action-row.activeDay svg {
+            color: white !important;
+            stroke: currentColor !important;
+        }
+    </style>
+
     <script src="js/shared.js" defer></script>
     <script src="js/schedule.js" defer></script>
 </head>
@@ -63,7 +86,7 @@
                     <span class="chevron" data-icon="chevron-right" aria-hidden="true"></span>
                 </a>
 
-                <a class="action-row activeDay" href="reschedule.html" data-date="2026-11-25">
+                <a class="action-row" href="reschedule.html" data-date="2026-11-25">
                     <span>
                         <strong>Wed</strong>
                     </span>
@@ -126,7 +149,7 @@
             </div>
 
             <!-- Month Schedule -->
-             <div id="monthDetail" style="display: none;">
+            <div id="monthDetail" style="display: none;">
                 <div class="month">
                     <ul>
                         <li class="prev">&#10094;</li>
@@ -170,15 +193,15 @@
                     <li>22<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
                     <li>23<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
                     <li>24<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
-                    <li class="activeDay">25<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>25<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
                     <li>26<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
                     <li>27<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
                     <li>28<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
                     <li>29<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
                     <li>30<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
                 </ul>
-             </div>
-            
+            </div>
+
         </main>
 
         <!-- Bottom Nav Bar -->
