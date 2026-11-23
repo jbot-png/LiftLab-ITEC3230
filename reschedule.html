@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Schedule | Lift Lab</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/schedule.css">
+    <script src="js/shared.js" defer></script>
+    <script src="js/schedule.js" defer></script>
+</head>
+
+<body data-page="reschedule">
+    <div class="app-shell">
+        <header class="app-header">
+            <a href="schedule.html" class="back-link" aria-label="Back to home">
+                &#8592;
+            </a>
+
+            <div class="brand">
+                <span class="brand-icon" data-icon="dumbbell" aria-hidden="true"></span>
+                <span>Lift Lab</span>
+            </div>
+        </header>
+
+        <main class="app-main app-main--stack">
+            <div style="margin-bottom: 15px;">
+                <h1 class="section-title">Reschedule Workout</h1>
+                <p class="page-subtitle">Move your workout to another day</p>
+            </div>
+
+            <div class="workoutSelect">
+                <span class="action-row">
+                    <span class="action-copy">
+                        <strong>Upper Body</strong>
+                        <small></small>
+                    </span>
+                </span>
+            </div>
+
+            <div style="margin-top: 15px;">
+                <h1 class="section-title">Select New Date</h1>
+            </div>
+
+            <!-- Month Schedule -->
+             <div id="monthDetail" style="display: block;">
+                <div class="month">
+                    <ul>
+                        <li class="prev">&#10094;</li>
+                        <li class="next">&#10095;</li>
+                        <li>November<br><span>2026</span></li>
+                    </ul>
+                </div>
+
+                <ul class="weekdays">
+                    <li>Su</li>
+                    <li>Mo</li>
+                    <li>Tu</li>
+                    <li>We</li>
+                    <li>Th</li>
+                    <li>Fr</li>
+                    <li>Sa</li>
+                </ul>
+
+                <ul class="days availibility">
+                    <li>1<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>2<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>3<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>4<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>5<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>6<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>7<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>8<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>9<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>10<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>11<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>12<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>13<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>14<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>15<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>16<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>17<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>18<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>19<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>20<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>21<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>22<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>23<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>24<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li class="activeDay">25<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>26<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>27<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>28<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>29<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>30<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                </ul>
+            </div>
+
+            <div id="dateError" class="action-row" style="margin-top: 15px;">
+                <h4>This date has passed or is unavailable, please select a valid date!</h4>
+            </div>
+
+            <div style="margin-top: 15px;">
+                <h1 class="section-title">Select Time</h1>
+            </div>
+
+            <!-- Time Selector -->
+            <select name="time" id="time" class="action-row">
+                <option value="12:00am">12:00am</option>
+                <option value="1:00am">1:00am</option>
+                <option value="2:00am">2:00am</option>
+                <option value="3:00am">3:00am</option>
+                <option value="4:00am">4:00am</option>
+                <option value="5:00am">5:00am</option>
+                <option value="6:00am">6:00am</option>
+                <option value="7:00am">7:00am</option>
+                <option value="8:00am">8:00am</option>
+                <option value="9:00am">9:00am</option>
+                <option value="10:00am">10:00am</option>
+                <option value="11:00am">11:00am</option>
+                <option value="12:00pm">12:00pm</option>
+                <option value="1:00pm">1:00pm</option>
+                <option value="2:00pm">2:00pm</option>
+                <option value="3:00pm">3:00pm</option>
+                <option value="4:00pm">4:00pm</option>
+                <option value="5:00pm">5:00pm</option>
+                <option value="6:00pm" selected="selected">6:00pm</option>
+                <option value="7:00pm">7:00pm</option>
+                <option value="8:00pm">8:00pm</option>
+                <option value="9:00pm">9:00pm</option>
+                <option value="10:00pm">10:00pm</option>
+                <option value="11:00pm">11:00pm</option>
+            </select>
+
+            <p class="error">Please select a valid date and time</p>
+
+            <button id="save-schedule" class="primary-btn" style="margin-top: 15px;">Save Changes</button>
+
+        </main>
+
+        <!-- Bottom Nav Bar -->
+        <nav class="bottom-nav" aria-label="Main navigation">
+
+            <a class="nav-link active" href="index.html">
+                <span data-icon="home" aria-hidden="true"></span>
+                <span>Home</span>
+            </a>
+
+            <a class="nav-link" href="preferences.html">
+                <span data-icon="dumbbell" aria-hidden="true"></span>
+                <span>Workouts</span>
+            </a>
+
+            <a class="nav-link" href="progress.html" aria-current="page">
+                <span data-icon="chart" aria-hidden="true"></span>
+                <span>Progress</span>
+            </a>
+
+            <a class="nav-link" href="profile.html">
+                <span data-icon="user" aria-hidden="true"></span>
+                <span>Profile</span>
+            </a>
+
+        </nav>
+    </div>
+</body>

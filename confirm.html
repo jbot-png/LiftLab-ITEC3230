@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Schedule | Lift Lab</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/schedule.css">
+    <script src="js/shared.js" defer></script>
+    <script src="js/schedule.js" defer></script>
+</head>
+
+<body data-page="schedule">
+    <div class="app-shell">
+
+        <header class="app-header">
+            <a href="schedule.html" class="back-link" aria-label="Back to home">
+                &#8592;
+            </a>
+
+            <div class="brand">
+                <span class="brand-icon" data-icon="dumbbell" aria-hidden="true"></span>
+                <span>Lift Lab</span>
+            </div>
+        </header>
+
+        <main class="app-main app-main--stack">
+            <div>
+                <h1 class="section-title">Schedule Updated</h1>
+                <p class="page-subtitle">Your workout has been moved</p>
+            </div>
+
+            <div class="newDay">
+                <div class="detailLine">
+                    <h4>Upper Body</h4>
+                </div>
+                <div class="detailLine">
+                    <span class="action-icon" data-icon="calendar-check" aria-hidden="true"></span>
+                    <span><h4 id="date-display">Nov 1</h4></span>
+                </div>
+                <div class="detailLine">
+                    <h4 id="time-display">6:00pm</h4>
+                </div>
+            </div>
+
+            <a href="schedule.html" class="primary-btn">View Schedule</a>
+
+        </main>
+
+        <!-- Bottom Nav Bar -->
+        <nav class="bottom-nav" aria-label="Main navigation">
+
+            <a class="nav-link active" href="index.html">
+                <span data-icon="home" aria-hidden="true"></span>
+                <span>Home</span>
+            </a>
+
+            <a class="nav-link" href="preferences.html">
+                <span data-icon="dumbbell" aria-hidden="true"></span>
+                <span>Workouts</span>
+            </a>
+
+            <a class="nav-link" href="progress.html" aria-current="page">
+                <span data-icon="chart" aria-hidden="true"></span>
+                <span>Progress</span>
+            </a>
+
+            <a class="nav-link" href="profile.html">
+                <span data-icon="user" aria-hidden="true"></span>
+                <span>Profile</span>
+            </a>
+
+        </nav>
+
+    </div>
+</body>
+</html>

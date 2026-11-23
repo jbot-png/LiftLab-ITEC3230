@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Schedule | Lift Lab</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/schedule.css">
+    <script src="js/shared.js" defer></script>
+    <script src="js/schedule.js" defer></script>
+</head>
+
+<body data-page="reschedule">
+    <div class="app-shell">
+        <header class="app-header">
+            <a href="index.html" class="back-link" aria-label="Back to home">
+                &#8592;
+            </a>
+
+            <div class="brand">
+                <span class="brand-icon" data-icon="dumbbell" aria-hidden="true"></span>
+                <span>Lift Lab</span>
+            </div>
+        </header>
+
+        <main class="app-main app-main--stack">
+            <div style="margin-bottom: 15px;">
+                <h1 class="section-title">Weekly Progress</h1>
+                <p class="page-subtitle">Your time spent working out this week</p>
+            </div>
+
+            <div class="chart" role="figure" aria-label="Monthly Sales">
+                <div class="bar-col">
+                    <span class="label">Mon</span>
+                    <div class="bar" style="width: 60%;">60 mins</div>
+                </div>
+                <div class="bar-col">
+                    <span class="label">Tues</span>
+                    <div class="bar" style="width: 60%;">60 mins</div>
+                </div>
+                <div class="bar-col activeDay">
+                    <span class="label">Wed</span>
+                    <div class="bar"></div>
+                </div>
+                <div class="bar-col">
+                    <span class="label">Thurs</span>
+                    <div class="bar"></div>
+                </div>
+                <div class="bar-col">
+                    <span class="label">Fri</span>
+                    <div class="bar"></div>
+                </div>
+                <div class="bar-col">
+                    <span class="label">Sat</span>
+                    <div class="bar"></div>
+                </div>
+                <div class="bar-col">
+                    <span class="label">Sun</span>
+                    <div class="bar"></div>
+                </div>
+            </div>
+
+            <a class="primary-btn" style="margin-top: 15px;" href="checkin.html">Workout Today</a>
+        </main>
+
+        <!-- Bottom Nav Bar -->
+        <nav class="bottom-nav" aria-label="Main navigation">
+
+            <a class="nav-link active" href="index.html">
+                <span data-icon="home" aria-hidden="true"></span>
+                <span>Home</span>
+            </a>
+
+            <a class="nav-link" href="preferences.html">
+                <span data-icon="dumbbell" aria-hidden="true"></span>
+                <span>Workouts</span>
+            </a>
+
+            <a class="nav-link" href="progress.html" aria-current="page">
+                <span data-icon="chart" aria-hidden="true"></span>
+                <span>Progress</span>
+            </a>
+
+            <a class="nav-link" href="profile.html">
+                <span data-icon="user" aria-hidden="true"></span>
+                <span>Profile</span>
+            </a>
+
+        </nav>
+    </div>
+</body>
+</html>
