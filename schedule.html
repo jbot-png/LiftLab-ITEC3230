@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Schedule | Lift Lab</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/schedule.css">
+    <script src="js/shared.js" defer></script>
+    <script src="js/schedule.js" defer></script>
+</head>
+
+<body data-page="schedule">
+    <div class="app-shell">
+
+        <header class="app-header">
+            <a href="index.html" class="back-link" aria-label="Back to home">
+                &#8592;
+            </a>
+
+            <div class="brand">
+                <span class="brand-icon" data-icon="dumbbell" aria-hidden="true"></span>
+                <span>Lift Lab</span>
+            </div>
+        </header>
+
+        <main class="app-main app-main--stack">
+            <div>
+                <h1 class="section-title">Workout Schedule</h1>
+                <p class="page-subtitle">Plan and manage your workouts</p>
+            </div>
+
+            <!-- Select Display -->
+            <div class="schedule-nav">
+                <button id="week" class="select schedule-column">Week</button>
+                <button id="month" class="deselect schedule-column">Month</button>
+            </div>
+
+            <!-- Week Schedule -->
+            <div id="weekDetail" class="home-actions">
+                <a class="action-row" href="progress.html">
+                    <span>
+                        <strong>Mon</strong>
+                    </span>
+                    <span class="action-icon" data-icon="dumbbell" aria-hidden="true"></span>
+                    <span class="action-copy">
+                        <strong>Upper Body</strong>
+                        <small>60 mins</small>
+                    </span>
+                    <span class="chevron" data-icon="chevron-right" aria-hidden="true"></span>
+                </a>
+
+                <a class="action-row" href="progress.html">
+                    <span>
+                        <strong>Tues</strong>
+                    </span>
+                    <span class="action-icon" data-icon="dumbbell" aria-hidden="true"></span>
+                    <span class="action-copy">
+                        <strong>Lower Body</strong>
+                        <small>60 mins</small>
+                    </span>
+                    <span class="chevron" data-icon="chevron-right" aria-hidden="true"></span>
+                </a>
+
+                <a class="action-row activeDay" href="reschedule.html">
+                    <span>
+                        <strong>Wed</strong>
+                    </span>
+                    <span class="action-icon" data-icon="dumbbell" aria-hidden="true"></span>
+                    <span class="action-copy">
+                        <strong>No Workout Scheduled</strong>
+                        <small></small>
+                    </span>
+                    <span class="chevron" data-icon="chevron-right" aria-hidden="true"></span>
+                </a>
+
+                <a class="action-row" href="reschedule.html">
+                    <span>
+                        <strong>Thurs</strong>
+                    </span>
+                    <span class="action-icon" data-icon="dumbbell" aria-hidden="true"></span>
+                    <span class="action-copy">
+                        <strong>No Workout Scheduled</strong>
+                        <small></small>
+                    </span>
+                    <span class="chevron" data-icon="chevron-right" aria-hidden="true"></span>
+                </a>
+
+                <a class="action-row" href="reschedule.html">
+                    <span>
+                        <strong>Fri</strong>
+                    </span>
+                    <span class="action-icon" data-icon="dumbbell" aria-hidden="true"></span>
+                    <span class="action-copy">
+                        <strong>Cardio</strong>
+                        <small>40 mins</small>
+                    </span>
+                    <span class="chevron" data-icon="chevron-right" aria-hidden="true"></span>
+                </a>
+
+                <a class="action-row" href="reschedule.html">
+                    <span>
+                        <strong>Sat</strong>
+                    </span>
+                    <span class="action-icon" data-icon="dumbbell" aria-hidden="true"></span>
+                    <span class="action-copy">
+                        <strong>No Workout Scheduled</strong>
+                        <small></small>
+                    </span>
+                    <span class="chevron" data-icon="chevron-right" aria-hidden="true"></span>
+                </a>
+
+                <a class="action-row" href="reschedule.html">
+                    <span>
+                        <strong>Sun</strong>
+                    </span>
+                    <span class="action-icon" data-icon="dumbbell" aria-hidden="true"></span>
+                    <span class="action-copy">
+                        <strong>Full Body</strong>
+                        <small>60 mins</small>
+                    </span>
+                    <span class="chevron" data-icon="chevron-right" aria-hidden="true"></span>
+                </a>
+
+            </div>
+
+            <!-- Month Schedule -->
+             <div id="monthDetail" style="display: none;">
+                <div class="month">
+                    <ul>
+                        <li class="prev">&#10094;</li>
+                        <li class="next">&#10095;</li>
+                        <li>November<br><span>2026</span></li>
+                    </ul>
+                </div>
+
+                <ul class="weekdays">
+                    <li>Su</li>
+                    <li>Mo</li>
+                    <li>Tu</li>
+                    <li>We</li>
+                    <li>Th</li>
+                    <li>Fr</li>
+                    <li>Sa</li>
+                </ul>
+
+                <ul class="days dayDetail">
+                    <li>1<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>2<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>3<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>4<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>5<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>6<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>7<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>8<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>9<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>10<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>11<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>12<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>13<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>14<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>15<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>16<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>17<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>18<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>19<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>20<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>21<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>22<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>23<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>24<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li class="activeDay">25<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>26<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>27<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>28<br><span class="noWorkout" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>29<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                    <li>30<br><span class="workoutScheduled" data-icon="dumbbell" aria-hidden="true"></span></li>
+                </ul>
+             </div>
+            
+        </main>
+
+        <!-- Bottom Nav Bar -->
+        <nav class="bottom-nav" aria-label="Main navigation">
+
+            <a class="nav-link active" href="index.html">
+                <span data-icon="home" aria-hidden="true"></span>
+                <span>Home</span>
+            </a>
+
+            <a class="nav-link" href="preferences.html">
+                <span data-icon="dumbbell" aria-hidden="true"></span>
+                <span>Workouts</span>
+            </a>
+
+            <a class="nav-link" href="progress.html" aria-current="page">
+                <span data-icon="chart" aria-hidden="true"></span>
+                <span>Progress</span>
+            </a>
+
+            <a class="nav-link" href="profile.html">
+                <span data-icon="user" aria-hidden="true"></span>
+                <span>Profile</span>
+            </a>
+
+        </nav>
+    </div>
+
+</body>
+
+</html>
