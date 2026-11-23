@@ -98,5 +98,50 @@ window.LiftLab = {
     loadIcons
 };
 
-/* Load the icons when the page is ready */
-document.addEventListener("DOMContentLoaded", loadIcons);
+
+/* Highlight the correct section in the bottom navigation */
+function updateActiveNav() {
+    const page = window.location.pathname.split("/").pop() || "index.html";
+
+    // Pages that belong to the Workouts section
+    const workoutPages = [
+        "checkin.html",
+        "preferences.html",
+        "recommendations.html",
+        "workout-details.html",
+        "customize.html",
+        "workout.html",
+        "summary.html",
+        "schedule.html",
+        "reschedule.html",
+        "confirm.html"
+    ];
+
+    let activePage = "index.html";
+
+    if (workoutPages.includes(page)) {
+        activePage = "preferences.html";
+    } else if (page === "progress.html") {
+        activePage = "progress.html";
+    } else if (page === "profile.html") {
+        activePage = "profile.html";
+    }
+
+    // Remove the old highlight and apply the correct one
+    document.querySelectorAll(".bottom-nav .nav-link").forEach(link => {
+        link.classList.remove("active");
+        link.removeAttribute("aria-current");
+
+        if (link.getAttribute("href") === activePage) {
+            link.classList.add("active");
+            link.setAttribute("aria-current", "page");
+        }
+    });
+}
+
+/* Load icons and update navigation when the page opens */
+document.addEventListener("DOMContentLoaded", function() {
+    loadIcons();
+    updateActiveNav();
+});
+
